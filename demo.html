@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confetti!</title>
+</head>
+<body>
+    <div id="confetti-button" class="button" onclick="spawnConfetti(55); setRandomFavicon()">
+        Confetti!
+    </div>
+    <style>
+        body {
+            user-select: none;
+
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            font-weight: 500;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            height: 100vh;
+
+            overflow: hidden;
+        }
+
+        .button {
+            display: flex;
+            align-items: center;
+
+            color: var(--icon-color);
+
+            width: fit-content;
+            height: fit-content;
+
+            padding: .3rem .4rem;
+            margin: 0 0 .3rem 0;
+
+            background-color: rgb(200, 200, 200);
+
+            border: 2px solid rgb(215, 215, 215);   
+            border-radius: .4rem;
+
+            box-shadow: 0 .3rem 0 rgb(180, 180, 180);
+
+            transition: transform .05s, box-shadow .05s;
+
+        }   .button:hover {
+            cursor: pointer;
+
+        }   .button:active {
+            box-shadow: none;
+
+            transform: translate(0, 6px);   
+        }
+    </style>
+    <script src="/confetti.js" type="module"></script>
+    <script>
+        function getRandomColor() { // Returns a random confetti color
+            const colors = ["#f44a4a", "#fb8f23", "#fee440", "#7aff60", "#00f5d4", "#00bbf9", "#9b5de5", "#f15bb5"] // Array of colors
+            return colors[Math.floor(Math.random() * colors.length)] // Pick a random color
+        }
+    
+        function setRandomFavicon() {
+            const shapes = [
+            `<rect x="5" y="0" width="6" height="16" fill="{{color}}" transform="rotate(${Math.floor(Math.random() * 361)}, 9, 9)"/>`, // Rectangle
+            `<path d="M0,12 Q4,4 8,12 Q12,20 16,12" stroke="{{color}}" stroke-width="5" fill="none" transform="rotate(${Math.floor(Math.random() * 361)}, 9, 9)"/>`, // Squigly line
+            `<circle cx="9" cy="9" r="5.5" fill="{{color}}" transform="rotate(${Math.floor(Math.random() * 361)}, 9, 9)"/>`, // Circle
+            `<polygon points="9,2.072 17,15.928 1,15.928" fill="{{color}}" transform="rotate(${Math.floor(Math.random() * 361)}, 9, 9)" />` // Triangle
+            ]
+
+            const shape = shapes[Math.floor(Math.random() * shapes.length)]
+            const color = getRandomColor()
+            const svg = `
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+                    ${shape.replaceAll("{{color}}", color)}
+                </svg>
+            `
+            const svgBlob = new Blob([svg], { type: "image/svg+xml" })
+            const url = URL.createObjectURL(svgBlob)
+    
+            let favicon = document.querySelector("link[rel~='icon']")
+            if (!favicon) {
+                favicon = document.createElement("link")
+                favicon.rel = "icon"
+                document.head.appendChild(favicon)
+            }
+            favicon.href = url
+        }
+    
+        // Run it once on load
+        setRandomFavicon()
+    </script>
+</body>
+</html>
