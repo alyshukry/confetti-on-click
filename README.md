@@ -1,7 +1,7 @@
 # 🎉 Confetti Effect
 A lightweight JavaScript library that spawns confetti at the mouse position on demand. Perfect for adding celebration effects to buttons, clicks, or custom triggers on your website.
 
-![Demo](https://drive.google.com/file/d/1LZpd9fqJwhDt2e-uBIcPzisFH0e2yqLn/view?usp=sharing)
+![Demo](demo.gif)
 
 ## How to use:
 ### Option 1: npm
