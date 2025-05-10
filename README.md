@@ -30,5 +30,5 @@ document.querySelector('#celebration-button').addEventListener('click', function
 ```
 <br>
 
-**License:** MIT
+**License:** MIT<br>
 **Contributing:** Contributions welcome! Please feel free to submit a Pull Request.
