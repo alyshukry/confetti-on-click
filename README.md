@@ -15,7 +15,7 @@ npm install confetti-on-click
 	```html
 	<script src="path/to/confetti.js" type="module"></script>
 	```
-### Basic Usage
+## Basic Usage
 Spawn confetti at the mouse position
 ```js
 // Spawn confetti with 30 particles at the current mouse position
