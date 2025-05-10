@@ -1,0 +1,31 @@
+{
+  "name": "confetti-on-click",
+  "version": "1.0.1",
+  "description": "🎉 Lightweight JavaScript confetti effect that spawns at the mouse position on demand.",
+  "main": "confetti.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alyshukry/confetti-on-click.git"
+  },
+  "keywords": [
+    "confetti",
+    "mouse effect",
+    "click effect",
+    "visual effect",
+    "javascript",
+    "frontend",
+    "ui",
+    "animation",
+    "canvas",
+    "celebration"
+  ],
+  "author": "Aly Shukry <alyshukry.dev@gmail.com> (https://alyshukry.works)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/alyshukry/confetti-on-click/issues"
+  },
+  "homepage": "https://github.com/alyshukry/confetti-on-click#readme"
+}

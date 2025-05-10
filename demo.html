@@ -64,10 +64,10 @@
     
         function setRandomFavicon() {
             const shapes = [
-            `<rect x="5" y="0" width="6" height="16" fill="{{color}}" transform="rotate(${Math.floor(Math.random() * 361)}, 9, 9)"/>`, // Rectangle
-            `<path d="M0,12 Q4,4 8,12 Q12,20 16,12" stroke="{{color}}" stroke-width="5" fill="none" transform="rotate(${Math.floor(Math.random() * 361)}, 9, 9)"/>`, // Squigly line
+            `<rect x="5" y="0" width="6" height="16" fill="{{color}}" transform="rotate(${Math.floor(Math.random() * 361)}, 9, 9), scale(.9)"/>`, // Rectangle
+            `<path d="M0,12 Q4,4 8,12 Q12,20 16,12" stroke="{{color}}" stroke-width="5" fill="none" transform="rotate(${Math.floor(Math.random() * 361)}, 9, 9), scale(.8)"/>`, // Squigly line
             `<circle cx="9" cy="9" r="5.5" fill="{{color}}" transform="rotate(${Math.floor(Math.random() * 361)}, 9, 9)"/>`, // Circle
-            `<polygon points="9,2.072 17,15.928 1,15.928" fill="{{color}}" transform="rotate(${Math.floor(Math.random() * 361)}, 9, 9)" />` // Triangle
+            `<polygon points="9,2.072 17,15.928 1,15.928" fill="{{color}}" transform="rotate(${Math.floor(Math.random() * 361)}, 9, 9), scale(.8)" />` // Triangle
             ]
 
             const shape = shapes[Math.floor(Math.random() * shapes.length)]
