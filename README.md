@@ -6,7 +6,7 @@ A lightweight JavaScript library that spawns confetti at the mouse position on d
 ## How to use:
 ### Option 1: npm
 ```bash
-npm install confetti-on-click
+npm install spawn-confetti
 ```
 
 ### Option 2: Vanilla JS
