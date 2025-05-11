@@ -75,4 +75,7 @@ There are a few global configurations that you can modify:
 <br>
 
 **License:** MIT
+
+<br>
+
 **Contributing:** Contributions welcome! Please feel free to submit a Pull Request.
