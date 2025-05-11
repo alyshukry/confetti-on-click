@@ -22,17 +22,17 @@ The `spawnConfetti()` function has the following arguments:
 - **`amount`***`(number)`* – Number of confetti particles to spawn.
 	*Default:* 30
 	
-- **`x, y`***`(number | string)`* – Spawn coordinates.
-	*Default:* mouse coordinates
+- **`x, y`***`(number | string)`* – Spawn coordinates.<br>
+	*Default:* mouse coordinates<br>
 	*Accepted string values*:
 	- `mouse` – spawn at mouse coordinate
 	- `center` – spawn at center coordinate of page
 	- `max` – spawn at max coordinate of page
-- **`velXRange, velYRange`***`(array)`* – Initial velocity range.
+- **`velXRange, velYRange`***`(array)`* – Initial velocity range.<br>
 	*Default:* [-5, 5], [-8, 0]
-- **`angVelXRange, angVelZRange`***`(array)`* – Constant rotational velocity range.
-		*Default:* [0, 0], [6, 12]
-- **`lifetime`***`(number)`* – Lifetime of particles in milliseconds.
+- **`angVelXRange, angVelZRange`***`(array)`* – Constant rotational velocity range.<br>
+	*Default:* [0, 0], [6, 12]
+- **`lifetime`***`(number)`* – Lifetime of particles in milliseconds.<br>
 	*Default:* 2000
 
 Example:
@@ -54,15 +54,15 @@ Example:
 ```
 ### Global Configuration:
 There are a few global configurations that you can modify:
-- **`acceleration`***`(vector)`* – Controls gravity direction.
+- **`acceleration`***`(vector)`* – Controls gravity direction.<br>
 	*Default:* (0, 0.25)
-- **`maxVel`***`(vector)`* – Sets maximum velocity.
+- **`maxVel`***`(vector)`* – Sets maximum velocity.<br>
 	 *Default*: (1.5, 10)
-- **`drag`***`(vector)`* – Affects air resistance. Lower values = more drag.
+- **`drag`***`(vector)`* – Affects air resistance. Lower values = more drag.<br>
 	 *Default*: (0.98, 1), must be ≤ 1
-- **`colors`***`(array)`* – List of colors to randomly assign to particles.
+- **`colors`***`(array)`* – List of colors to randomly assign to particles.<br>
 	 *Default*: #f44a4a, #fb8f23, #fee440, #7aff60, #00f5d4, #00bbf9, #9b5de5, #f15bb5
-- **`shapes`***`(array of svg strings)`* – Shapes for particles to randomly select from.
+- **`shapes`***`(array of svg strings)`* – Shapes for particles to randomly select from.<br>
 	 *Default*:
 	 ```html
 	 <rect x="5" y="0" width="6" height="16"/>,
