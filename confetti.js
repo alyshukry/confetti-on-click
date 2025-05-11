@@ -36,7 +36,7 @@ class Confetti {
         this.pos = new Vector(0, 0)
         this.rotation = new Vector(0, Math.random() * 360)
 
-        lifetime === undefined || lifetime === "default" ? this.lifetime = 2000 : this.lifetime = lifetime // Lifetime to delete confetti after a while
+        this.lifetime = lifetime // Lifetime to delete confetti after a while
 
         this.vel = new Vector(0, 0)        
         this.angVel = new Vector(0, 0) // Rotational velocity
@@ -101,7 +101,18 @@ document.addEventListener("mousemove", (e) => {
 const confettiContainer = document.createElement("div") // Creating a container for the confetti
 const confettiParticles = [] // Creating an array for all the confetti
 let batchId = 0 // Initializing batch ID
-function spawnConfetti(amount, x, y, velX, velY, angVelX, angVelZ, lifetime) {
+function spawnConfetti({
+    // Default values
+    amount = 30,
+    x = "mouse",
+    y = "mouse",
+    velXRange = [-5, 5],
+    velYRange = [-8, 0],
+    angVelXRange = [0, 0],
+    angVelZRange = [6, 12],
+    lifetime = 2000
+
+} = {}) {
     // Setting the confetti container attributes
     confettiContainer.style.position = "fixed"
     confettiContainer.style.top = "0"
@@ -129,30 +140,22 @@ function spawnConfetti(amount, x, y, velX, velY, angVelX, angVelZ, lifetime) {
     // Check "max" pos keyword for x and y params
     if (x === "max") x = window.innerWidth
     if (y === "max") y = window.innerHeight
+    
+    confettiParticles.forEach((particle) => { // Setting confetti stuff
+        // Setting the range of velocities
+        let velX = Math.random() * (velXRange[1] - velXRange[0]) + velXRange[0]
+        let velY = Math.random() * (velYRange[1] - velYRange[0]) + velYRange[0]
+        let angVelX = Math.random() * (angVelXRange[1] - angVelXRange[0]) + angVelXRange[0]
+        let angVelZ = Math.random() * (angVelZRange[1] - angVelZRange[0]) + angVelZRange[0]
 
-
-    confettiParticles.forEach((particle) => { // Moving the confetti particles to the mouse
         if (particle.batchId === batchId) {
-            particle.pos.set(x === undefined || x === "default" ? mouseX : x, y === undefined || y === "default" ? mouseY : y) // Use mouse position if not defined by user or user defined "default"
-            particle.vel.set(velX === undefined || velX === "default" ? (Math.random() * 7.5) * (Math.random() < 0.5 ? -1 : 1) : velX, velY === undefined || velY === "default" ? Math.random() * -8 : velY) // Use random velocity if not defined by user or user defined "default"         
-            particle.angVel.set(angVelX === undefined || angVelX === "default" ? 0 : angVelX, angVelZ === undefined || angVelZ === "default" ? Math.random() * 12 + 6 : angVelZ) // Use random angular velocity if not defined by user or user defined "default"
+            particle.pos.set(x, y)
+            particle.vel.set(velX, velY)      
+            particle.angVel.set(angVelX, angVelZ)
         }
 
     })
 }   export {spawnConfetti}; window.spawnConfetti = spawnConfetti // Exporting the function
-
-// function spawnConfettiWithDelay(i) {
-//     if (i < 500) {
-//       spawnConfetti(2, 'max', 'center', 'default', 'default', 'default', 'default', 750);
-//       spawnConfetti(2, 0, 'center', 'default', 'default', 'default', 'default', 750);
-  
-//       // Set the delay for the next iteration (100 ms)
-//       setTimeout(() => spawnConfettiWithDelay(i + 1), 10);
-//     }
-//   }
-  
-//   spawnConfettiWithDelay(0);
-  
 
 // Animate one frame
 function animate() {
