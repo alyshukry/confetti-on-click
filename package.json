@@ -1,6 +1,6 @@
 {
-  "name": "confetti-on-click",
-  "version": "1.0.4",
+  "name": "spawn-confetti",
+  "version": "1.0.0",
   "description": "🎉 Lightweight JavaScript confetti effect that spawns at the mouse position on demand.",
   "main": "confetti.js",
   "scripts": {
@@ -27,8 +27,5 @@
   "bugs": {
     "url": "https://github.com/alyshukry/confetti-on-click/issues"
   },
-  "homepage": "https://github.com/alyshukry/confetti-on-click#readme",
-  "dependencies": {
-    "confetti-on-click": "^1.0.3"
-  }
+  "homepage": "https://github.com/alyshukry/confetti-on-click#readme"
 }
