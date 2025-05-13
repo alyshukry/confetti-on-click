@@ -40,7 +40,7 @@
             background-color: rgb(200, 200, 200);
 
             border: 2px solid rgb(215, 215, 215);   
-            border-radius: .4rem;
+            border-radius: .6rem;
 
             box-shadow: 0 .3rem 0 rgb(180, 180, 180);
 
@@ -53,10 +53,28 @@
             box-shadow: none;
 
             transform: translate(0, 6px);   
+
+        }   .button.touch-held {
+            box-shadow: none;
+
+            transform: translate(0, 6px);   
         }
     </style>
     <script src="/confetti.js" type="module"></script>
     <script>
+        // Copying :active CSS on mobile
+        document.querySelectorAll('div', 'svg').forEach(el => {
+            el.addEventListener('touchstart', () => {
+                el.classList.add('touch-held')
+            })
+            el.addEventListener('touchend', () => {
+                el.classList.remove('touch-held')
+            })
+            el.addEventListener('touchcancel', () => {
+                el.classList.remove('touch-held')
+            })
+        })
+
         function getRandomColor() { // Returns a random confetti color
             const colors = ["#f44a4a", "#fb8f23", "#fee440", "#7aff60", "#00f5d4", "#00bbf9", "#9b5de5", "#f15bb5"] // Array of colors
             return colors[Math.floor(Math.random() * colors.length)] // Pick a random color
