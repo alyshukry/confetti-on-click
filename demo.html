@@ -11,7 +11,11 @@
     </div>
     <style>
         body {
-            user-select: none;
+            user-select: none; /* For modern browsers */
+            -webkit-user-select: none; /* For Safari */
+            -moz-user-select: none; /* For Firefox */
+            -ms-user-select: none; /* For Internet Explorer */
+            cursor: default;
 
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
             font-weight: 500;
