@@ -56,10 +56,13 @@ Example:
 There are a few global configurations that you can modify:
 - **`acceleration`***`(vector)`* – Controls gravity direction.<br>
 	*Default:* (0, 0.25)
+	➜ *To edit values, assign like*: `acceleration.x = ...`, `acceleration.y = ...`
 - **`maxVel`***`(vector)`* – Sets maximum velocity.<br>
 	 *Default*: (1.5, 10)
+	➜ *To edit values, assign like*: `maxVel.x = ...`, `maxVel.y = ...`
 - **`drag`***`(vector)`* – Affects air resistance. Lower values = more drag.<br>
 	 *Default*: (0.98, 1), must be ≤ 1
+	➜ *To edit values, assign like*: `drag.x = ...`, `drag.y = ...`
 - **`colors`***`(array)`* – List of colors to randomly assign to particles.<br>
 	 *Default*: #f44a4a, #fb8f23, #fee440, #7aff60, #00f5d4, #00bbf9, #9b5de5, #f15bb5
 - **`shapes`***`(array of svg strings)`* – Shapes for particles to randomly select from.<br>
