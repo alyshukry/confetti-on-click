@@ -27,5 +27,8 @@
   "bugs": {
     "url": "https://github.com/alyshukry/confetti-on-click/issues"
   },
-  "homepage": "https://github.com/alyshukry/confetti-on-click#readme"
+  "homepage": "https://github.com/alyshukry/confetti-on-click#readme",
+  "dependencies": {
+    "spawn-confetti": "^2.0.0"
+  }
 }
