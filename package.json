@@ -20,7 +20,17 @@
     "ui",
     "animation",
     "canvas",
-    "celebration"
+    "celebration",
+    "svg",
+    "particle effect",
+    "event-driven",
+    "interactive",
+    "lightweight",
+    "customizable",
+    "web animation",
+    "dynamic effects",
+    "browser-based",
+    "fun"
   ],
   "author": "Aly Shukry <alyshukry.dev@gmail.com> (https://alyshukry.works)",
   "license": "MIT",
