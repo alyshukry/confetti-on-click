@@ -1,6 +1,6 @@
 {
   "name": "spawn-confetti",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "🎉 Lightweight JavaScript confetti effect that spawns at the mouse position on demand.",
   "main": "confetti.js",
   "scripts": {
