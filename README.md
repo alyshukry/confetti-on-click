@@ -1,6 +1,6 @@
 
 # 🎉 Confetti Effect
-![npm](https://img.shields.io/npm/v/spawn-confetti) ![license](https://img.shields.io/badge/license-MIT-blue.svg) ![downloads](https://img.shields.io/npm/dw/spawn-confetti)
+![npm](https://img.shields.io/npm/v/spawn-confetti) ![license](https://img.shields.io/badge/license-MIT-blue.svg) ![downloads](https://img.shields.io/npm/dt/spawn-confetti)
 
 A lightweight and highly configurable JavaScript library that spawns confetti on demand—perfect for adding celebration effects to buttons, clicks, or custom triggers on your website.
 
